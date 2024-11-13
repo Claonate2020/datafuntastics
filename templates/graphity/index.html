@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: bisque;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="{{ logo }}" alt="" style="width: 200px"> 
+    </div>
+    <h2>
+        Reportes estadísticos
+    </h2>
+    <div>
+        <strong>Eje de las abscisas: {{ axis_x }}</strong>
+    </div>
+    <div>
+        <strong>Eje de las ordenadas: {{ axis_y }}</strong>
+    </div>
+    <div>
+        <strong>Eje Z: {{ axis_z }}</strong>
+    </div>
+    <div>
+        <strong>Predicción: {{ predicion }}</strong>
+    </div>
+    
+    <script>
+        alert("Hola desde Django")
+    </script>
+</body>
+</html>
+

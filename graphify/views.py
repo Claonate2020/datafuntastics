@@ -4,8 +4,15 @@ import matplotlib.pyplot as plt
 from io import BytesIO
 # Create your views here.
 def v_index(request):
-    return HttpResponse("Graphity index")
-
+    # return HttpResponse("Graphity index")
+    prediccion = "Incremento de 5% en ventas"
+    return render(request, "graphity/index.html", {
+        "axis_x": "Producto",
+        "axis_y": "Cantidad",
+        "logo": "https://img.freepik.com/premium-vector/analytic-graph-logo-vector-icon-illustration_12860-119.jpg",
+        "predicion": prediccion,
+    })
+       
 def v_reporte_png(request):
     # Datos para el gráfico (puedes adaptarlos según tus necesidades)
     labels = ['Category A', 'Category B', 'Category C']
