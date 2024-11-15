@@ -7,6 +7,9 @@ from openpyxl import Workbook
 def v_index(request):
     return HttpResponse("Sheetmarker index")
 
+def v_macros(request):
+    return render(request, "sheetmarker/macros.html")
+
 def v_reporte_xls(request):
     # Crear un libro de Excel
     workbook = Workbook()
