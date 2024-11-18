@@ -1,4 +1,5 @@
 {% extends 'layout_sheetmarker.html' %}
+
 {% block espacio1 %}
 <!-- CONTENIDO A -->
 <div class="card h-100 text-center p-3">
@@ -6,6 +7,12 @@
         <h5 class="card-title">Macros al dia</h5>
         <p class="card-text">Exporta datos en Macros para mantener la calidad y profesionalismo.</p>
         <button class="btn btn-primary">Ver más</button>
+
+        <ul>
+            {% for feat in features %}
+            <li>{{ feat }}</li>
+            {% endfor %}
+        </ul>
     </div>
 </div>
 {% endblock %}
