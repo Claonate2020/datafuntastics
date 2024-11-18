@@ -3,18 +3,35 @@ from django.shortcuts import render
 import datetime
 from openpyxl import Workbook
 
+
+static_values = {
+    "direccion": "Las Flores Amarillas 343434 | Concepción",
+    "telefono": "+56 95533212",
+    "email": "ejercicio_python@gmail.com",
+    "whatsapp": "56962379779",
+    "ig": "https://www.instagram.com/soydorothy_/"
+}
 # Create your views here.
 def v_index(request):
     return HttpResponse("Sheetmarker index")
 
 def v_macros(request):
-    return render(request, "sheetmarker/macros.html")
+    context = {
+        "static_values": static_values
+   }
+    return render(request, "sheetmarker/macros.html", context)
 
 def v_powerbi(request):
-    return render(request, "sheetmarker/powerbi.html")
+    context = {
+        "static_values": static_values
+   }
+    return render(request, "sheetmarker/powerbi.html", context)
 
 def v_analitica(request):
-    return render(request, "sheetmarker/analitica.html")
+    context = {
+        "static_values": static_values
+   }
+    return render(request, "sheetmarker/analitica.html", context)
 
 def v_reporte_xls(request):
     # Crear un libro de Excel
